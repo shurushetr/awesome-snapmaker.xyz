@@ -1,18 +1,3 @@
-# Awesome Snapmaker List - Source of Truth
-# 
-# Submission & Triage Workflow:
-# 1. User submits a new resource via the GitHub Issue template (submit-resource.yml).
-# 2. Intake Check Action (intake-check.yml) runs immediately. It normalizes the submitted 
-#    URL (strips tracking tags like ?u=...) and checks against all existing URLs in this file.
-#    - If DUPLICATE: Bot comments "Duplicate found", labels it 'duplicate', and closes it.
-#    - If UNIQUE: Bot comments "Under review", and labels it 'pending-review'.
-# 3. Maintainer reviews the open 'pending-review' Issue. They can freely edit the title,
-#    description, URLs, or dropdown tags directly on the GitHub Issue page to fix formatting.
-# 4. Maintainer adds the 'approved' label to the GitHub Issue.
-# 5. Approval Action (process-submission.yml) triggers, grabs the final edited Issue body, 
-#    parses it into a new YAML record, and generates a Pull Request injecting it below.
-# 
-### framework data
 project_info:
   title: Awesome Snapmaker List
   description: A curated list of awesome Snapmaker resources, mods, and guides.
@@ -38,7 +23,7 @@ allowed_tags:
   - COMBINED
   record_type:
   - VIDEO
-  - DISCUSSION 
+  - DISCUSSION
   - ARTICLE
   - DOWNLOAD
   - SHOP
@@ -61,8 +46,6 @@ allowed_tags:
   - DE
   - FR
   - ES
-
-### records
 records:
 - id: snapmaker-luban-guide
   title: Comprehensive Luban Slicing Guide
@@ -2607,3 +2590,29 @@ records:
     free_tags:
     - Specific to Snapmaker machines
     - Tools
+- id: unique-submission-test
+  title: Unique submission test
+  description: Klicky probe for snapmaker single extruder. Level on anything, simple,
+    no firmware changes. You can find parts in the
+  author_name: Some Author
+  author_link: https://someauthor.gov
+  original_link: https://linktothemod.com
+  date_added: '2026-03-07'
+  difficulty: ADVANCED
+  cost: FREE
+  tags:
+    machine_type:
+    - UNIVERSAL
+    machine_tool_type:
+    - FDM
+    - COMBINED
+    record_type:
+    - FIRMWARE
+    official_flag:
+    - UNOFFICIAL
+    free_tags:
+    - this is cool
+    - labels work
+  extra_buttons:
+  - label: Download PDF
+    link: https://cdn.realfood.gov/DGA.pdf
